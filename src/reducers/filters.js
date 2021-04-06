@@ -1,9 +1,12 @@
+import moment from 'moment';
+import { toMomentObject } from 'react-dates';
+
 // Filters reducer
 const filtersReducerDefaultState = {
   text: '',
   sortBy: 'date',
-  startDate: undefined,
-  endDate: undefined
+  startDate: moment().startOf('month'),
+  endDate: moment().endOf('month')
 };
 
 const filtersReducer = (state = filtersReducerDefaultState, action) => {
