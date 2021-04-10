@@ -2,47 +2,47 @@ import { createStore } from 'redux';
 
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
   type: 'INCREMENT',
-  incrementBy: incrementBy
+  incrementBy: incrementBy,
 });
 
 const decrementCount = ({ decrementBy = 1 } = {}) => ({
   type: 'DECREMENT',
-  decrementBy: decrementBy
-})
+  decrementBy: decrementBy,
+});
 
-const setCount = ({count}) => ({
+const setCount = ({ count }) => ({
   type: 'SET',
-  count: count
-})
+  count: count,
+});
 
 const resetCount = () => ({
-  type: 'RESET'
-})
+  type: 'RESET',
+});
 
 const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return {
-        count: state.count + action.incrementBy
+        count: state.count + action.incrementBy,
       };
     case 'DECREMENT':
       return {
-        count: state.count - action.decrementBy
-      }
+        count: state.count - action.decrementBy,
+      };
     case 'RESET':
       return {
-        count: 0
-      }
-    case 'SET': 
+        count: 0,
+      };
+    case 'SET':
       return {
-        count: action.count
-      }
+        count: action.count,
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-const store = createStore( countReducer );
+const store = createStore(countReducer);
 
 const unsubscribe = store.subscribe(() => {
   console.log(store.getState());
@@ -58,4 +58,4 @@ store.dispatch(decrementCount());
 
 store.dispatch(decrementCount({ decrementBy: 10 }));
 
-store.dispatch(setCount({count: -101}));
+store.dispatch(setCount({ count: -101 }));

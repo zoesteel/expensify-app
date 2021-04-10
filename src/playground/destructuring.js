@@ -25,25 +25,28 @@ const book = {
   title: 'Ego is the enemy',
   author: 'Ryan Holiday',
   publisher: {
-    name: 'Penguin'
-  }
+    name: 'Penguin',
+  },
 };
-
 
 const { name: publisherName = 'Self-published' } = book.publisher;
 
 console.log(publisherName);
 
 // Array Destructuring
-const address = ['1299 South Juniper Street', 'Philadelphia', 'Pennsylvania', '14147'];
+const address = [
+  '1299 South Juniper Street',
+  'Philadelphia',
+  'Pennsylvania',
+  '14147',
+];
 
-const [ , city, state = 'Hawaii' ] = address;
+const [, city, state = 'Hawaii'] = address;
 
 console.log(`You are in ${city}, ${state}.`);
 
+const item = ['coffee (iced)', '$2.00', '$2.50', '$2.75'];
 
-const item  = ['coffee (iced)', '$2.00', '$2.50', '$2.75'];
-
-const [ product, , mediumPrice ] = item;
+const [product, , mediumPrice] = item;
 
 console.log(`A medium ${product} costs ${mediumPrice}`);

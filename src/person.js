@@ -9,4 +9,4 @@ const isSenior = (age) => age >= SENIOR_AGE;
 
 // export default isSenior;
 
-export { isAdult, canDrink, isSenior as default }
+export { isAdult, canDrink, isSenior as default };
