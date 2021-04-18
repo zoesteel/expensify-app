@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "test": "jest",
+    "test": "jest --config=jest.config.json",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "dependencies": {
@@ -16,11 +16,15 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "1.0.0",
+    "enzyme-to-json": "3.0.1",
     "jest": "20.0.4",
     "live-server": "^1.2.1",
     "moment": "2.18.1",
     "node-sass": "^4.14.1",
     "prettier": "2.2.1",
+    "raf": "3.3.2",
     "react": "16.0.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.3.0",
@@ -28,6 +32,7 @@
     "react-modal": "^3.11.2",
     "react-redux": "^5.0.5",
     "react-router-dom": "^5.2.0",
+    "react-test-renderer": "16.0.0",
     "redux": "^3.7.2",
     "sass-loader": "^10.0.2",
     "uuid": "^8.3.2",
